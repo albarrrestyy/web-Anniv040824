@@ -19,15 +19,14 @@
     }
 
     header {
-      height: 100vh;
-      background-image: url('foto1.jpg');
-      background-size: cover;
-      background-position: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: relative;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
     }
+
 
     header::before {
       content: "";
@@ -61,10 +60,23 @@
 
     header h1 {
       color: #fff;
-      font-size: 3.5em;
-      z-index: 1;
+      font-size: 2.5em;
+      padding: 0 20px;
+      text-align: center;
+      z-index: 2;
       text-shadow: 0 0 15px pink;
       animation: fadeIn 2s ease forwards;
+    }
+
+        /* Responsive tweak */
+    @media (max-width: 768px) {
+      header {
+        height: 80vh;
+      }
+
+      header h1 {
+        font-size: 1.8em;
+      }
     }
 
     section {
